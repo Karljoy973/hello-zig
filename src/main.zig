@@ -29,12 +29,12 @@ pub fn main() !void {
         std.debug.print(" - Current Value = {any} at index {any}", .{ value, index });
     }
     // Functions
-fn addFive(x: u32) u32 {
-    return x + 5;
-};
-
-
-
+    const otherWay = struct {
+        fn f(x: u32) u32 {
+            return x + 5;
+        }
+    }.f;
+    std.debug.print("{}\n", .{otherWay(5)});
     // Defer
     // var data = 5;
     // for (j..i) |value| u32 {
@@ -66,4 +66,8 @@ fn addFive(x: u32) u32 {
     // Vectors
     // Imports
 
+}
+// Functions
+fn addFive(x: u32) u32 {
+    return x + 5;
 }
