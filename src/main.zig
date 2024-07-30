@@ -28,7 +28,20 @@ pub fn main() !void {
     for (n, 0..) |value, index| {
         std.debug.print(" - Current Value = {any} at index {any}", .{ value, index });
     }
+    // Functions
+fn addFive(x: u32) u32 {
+    return x + 5;
+};
+
+
+
     // Defer
+    // var data = 5;
+    // for (j..i) |value| u32 {
+    //     value;
+    //     data = data + j;
+    //     defer addFive(4);
+    // };
     // Errors
     // Switch
     // Pointers
